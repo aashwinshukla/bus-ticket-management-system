@@ -8,7 +8,9 @@ int code;
 long long contact;
 char email[40];
 int choice;
+int option;
 bool flag=true;
+bool flag_1=true;
 
 void userData();
 int yourChoice();
@@ -39,19 +41,32 @@ int main(){
     printf("\n\n---Thanks for Login---\n\n");
     yourChoice(choice);
     
-    // printf("whats on your mind?");
-    // printf("\n1. Bus Reservation ");
-    // printf("\n2. Buses");
-    // printf("\n3. Cities");
-    // printf("\n4. Profile");
-    // printf("\n5. Exit\n");
 
-    // scanf("%d", &choice);
 while(flag==true){
     choice = yourChoice(choice);
         switch(choice){
             case 1:
-            printf("ticket reservetion coming soon ");
+            busReservation(option);//here is where i left
+            while(flag_1==true){
+                option=busReservation(option);
+                    switch(option){
+                        case 1:
+                        printf("\nlong travel coming soon");
+                        break;
+                
+                        case 2:
+                        printf("\nlocal travel coming soon");
+                        break
+                
+                        case 3:
+                        yourChoice();
+                        break;
+                
+                        default:
+                        printf("\nwrong input!, try again");
+                        break;
+                    }
+            }   
             break;
             
             case 2:
@@ -76,6 +91,24 @@ while(flag==true){
             break;
         }
 
+    }
+
+    switch(option){
+        case 1:
+        printf("\nlong travel coming soon");
+        break;
+
+        case 2:
+        printf("\nlocal travel coming soon");
+        break
+
+        case 3:
+        yourChoice();
+        break;
+
+        default:
+        printf("\nwrong input!, try again");
+        break;
     }
 }
 
@@ -139,4 +172,18 @@ void buses(){
     printf("-----------------------------------------------------------\n");
     printf("11. [WB-02-CC-1254]  Eastern Star Liners (Luxury Seater)\n");
     printf("===========================================================\n");
+}
+
+int busReservation(){
+    int local_option;
+    printf("\n=========Welcome to reservation page=========\n");
+    printf("select the type of your travel:\n");
+    printf("1. long travel (more than 10hr travel)\n");
+    printf("2. local travel\n");
+    printf("3. Back\n");
+    printf("\nEnter your choice number:\n");
+    scanf("%d", &local_option);
+
+return local_option;
+
 }
