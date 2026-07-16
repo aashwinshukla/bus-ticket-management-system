@@ -214,15 +214,27 @@ if(details.date < 16 && details.date > 0) {
         if(!is_any && budget_val <= 1500) {
             printf("Sorry, no bus for long distance travel in this budget.\n");
         } else if(is_any || (budget_val > 1500 && budget_val <= 5000)) {
-            printf("These are the standard long travel buses available!\n");
+            printf("\n========== AVAILABLE STANDARD LONG-TRAVEL BUSES ==========\n");
+            printf("-> [MH-14-LX-8890] Deccan Queen Transports (Luxury Seater) - Fare: 1800\n");
+            printf("-> [CH-02-EX-9011] Northern Shuttle (AC Express)          - Fare: 2200\n");
+            printf("=========================================================\n");
         } else {
-            printf("These are the luxury sleeper buses available!\n");
+            printf("\n========== AVAILABLE LUXURY SLEEPER BUSES ==========\n");
+            printf("-> [MH-12-AS-4521] Bharat Express (AC Sleeper)            - Fare: 5500\n");
+            printf("-> [DL-01-NE-1092] Capital Flyer (Premium Sleeper)        - Fare: 6200\n");
+            printf("-> [KA-03-SV-2287] Silicon Valley Voyager (Multi-Axle AC)  - Fare: 7000\n");
+            printf("====================================================\n");
         }
     } else {
         if(!is_any && budget_val <= 1500) {
             printf("Sorry, no bus for long distance travel in this budget.\n");
         } else {
-            printf("These are the off-peak long travel buses available!\n");
+            printf("\n========== AVAILABLE OFF-PEAK LONG-TRAVEL BUSES ==========\n");
+            printf("-> [RJ-14-HT-5543] Pink City Travels (Non-AC Seater)       - Fare: 1600\n");
+            printf("-> [GJ-01-EE-3214] Western Fleet (Electric Express)        - Fare: 2400\n");
+            printf("-> [WB-02-CC-1254] Eastern Star Liners (Luxury Seater)     - Fare: 3000\n");
+            printf("-> [TS-09-CB-6641] Cyberabad Cruiser (AC Sleeper)          - Fare: 4500\n");
+            printf("==========================================================\n");
         }
     }
 }
@@ -235,10 +247,15 @@ void localTravel(booking details){
     bool is_any = (strcmp(details.budget, "any") == 0);
 
     if(is_any || (budget_val >= 500 && budget_val <= 1500)) {
-        printf("These are the local shuttle buses available.\n");
+        printf("\n========== AVAILABLE LOCAL SHUTTLE BUSES ==========\n");
+        printf("-> [GA-03-TR-7765] Coastal Cruise Liners (Multi-Axle AC)  - Fare: 950\n");
+        printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+        printf("===================================================\n");
     } else {
-        printf("No special luxury local buses at this high price range. Standard shuttles are cheaper!\n");
-    }
+        printf("\n[INFO] Your budget is higher than standard local fares.\n");
+        printf("We recommend our premium localized shuttle:\n");
+        printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+        printf("(The remaining change will be refunded at the boarding counter.)\n");
 }
 
 
