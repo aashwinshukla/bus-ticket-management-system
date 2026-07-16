@@ -246,18 +246,18 @@ void localTravel(booking details){
     int budget_val = atoi(details.budget);
     bool is_any = (strcmp(details.budget, "any") == 0);
 
-    if(is_any || (budget_val >= 500 && budget_val <= 1500)) {
-        printf("\n========== AVAILABLE LOCAL SHUTTLE BUSES ==========\n");
-        printf("-> [GA-03-TR-7765] Coastal Cruise Liners (Multi-Axle AC)  - Fare: 950\n");
-        printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
-        printf("===================================================\n");
-    } else {
-        printf("\n[INFO] Your budget is higher than standard local fares.\n");
-        printf("We recommend our premium localized shuttle:\n");
-        printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
-        printf("(The remaining change will be refunded at the boarding counter.)\n");
+        if(is_any || (budget_val >= 500 && budget_val <= 1500)) {
+            printf("\n========== AVAILABLE LOCAL SHUTTLE BUSES ==========\n");
+            printf("-> [GA-03-TR-7765] Coastal Cruise Liners (Multi-Axle AC)  - Fare: 950\n");
+            printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+            printf("===================================================\n");
+        } else {
+            printf("\n[INFO] Your budget is higher than standard local fares.\n");
+            printf("We recommend our premium localized shuttle:\n");
+            printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+            printf("(The remaining change will be refunded at the boarding counter.)\n");
+    }
 }
-
 
 void userData(){
     printf("\n----YOUR DATA----\n");
