@@ -350,7 +350,7 @@ return local_option;
 
 void transaction_1(){
     
-    while(flag_4=true){
+    while(flag_4==true){
         printf("\n Enter your Bus choice number :");
         scanf("%d", &bus_choice);
             switch(bus_choice){
@@ -366,6 +366,16 @@ void transaction_1(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+                        
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -384,6 +394,16 @@ void transaction_1(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -400,7 +420,7 @@ void transaction_1(){
 }
 
 void transaction_2(){
-    while(flag_4=true){
+    while(flag_4==true){
         printf("\n Enter your Bus choice number :");
         scanf("%d", &bus_choice);
             switch(bus_choice){
@@ -416,6 +436,16 @@ void transaction_2(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -433,7 +463,17 @@ void transaction_2(){
                     if(pin<=9999 && pin>999){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
-                        printf("\nticket number #26");
+                        printf("\nticket number #26");\
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -452,6 +492,16 @@ void transaction_2(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+                        
                         flag_4=false;
                         break;
                     }else{
@@ -468,7 +518,7 @@ void transaction_2(){
 }
 
 void transaction_3(){
-    while(flag_4=true){
+    while(flag_4==true){
         printf("\n Enter your Bus choice number :");
         scanf("%d", &bus_choice);
             switch(bus_choice){
@@ -484,6 +534,16 @@ void transaction_3(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+                        
                         flag_4=false;
                         break;
                     }else{
@@ -502,6 +562,16 @@ void transaction_3(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+                        
                         flag_4=false;
                         break;
                     }else{
@@ -520,6 +590,16 @@ void transaction_3(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -538,6 +618,16 @@ void transaction_3(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
@@ -553,7 +643,7 @@ void transaction_3(){
 }
 
 void transaction_4(){
-    while(flag_4=true){
+    while(flag_4==true){
         printf("\n Enter your Bus choice number :");
         scanf("%d", &bus_choice);
             switch(bus_choice){
@@ -569,6 +659,16 @@ void transaction_4(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+                        
                         flag_4=false;
                         break;
                     }else{
@@ -587,6 +687,16 @@ void transaction_4(){
                         printf("\npayment completed ");
                         printf("\ntransaction number : 12546728916739268");
                         printf("\nticket number #26");
+
+printf("\n=============================================");
+printf("\n           BOARDING PASS / TICKET            ");
+printf("\n=============================================");
+printf("\n Passenger: %s %s", name, surname);
+printf("\n Route:     %s To %s", details.city_city, destination);
+printf("\n Date:      Day %d of the month", details.date);
+printf("\n Ticket No: #26 | Seat: 12B");
+printf("\n=============================================\n");
+
                         flag_4=false;
                         break;
                     }else{
