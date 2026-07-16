@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<string.h>
+#include<stdlib.h>
 
 typedef struct{
     int date;
     char city_city[15];
     char budget[6];
     char am_pm[3];
-
 }booking;
 
 char name[25];
@@ -30,9 +31,9 @@ void cities();
 void buses();
 int busReservation();
 
-Booking getBookingDetails();
-void longTravel(Booking details);  
-void localTravel(Booking details);
+booking getBookingDetails();
+void longTravel(booking details);  
+void localTravel(booking details);
 
 int main(){
 
@@ -60,23 +61,32 @@ int main(){
     
 
 while(flag==true){
-    choice = yourChoice(choice);
+
+    choice = yourChoice();
+
         switch(choice){
+
             case 1:
-            
+            flag_1=true;
+
             while(flag_1==true){
-                option=busReservation(option);
+
+                option=busReservation();
+
                     switch(option){
-                        case 1:
-                        booking my_trip=getBookingDetails();
+
+                        case 1:{
+                        booking my_trip = getBookingDetails();
                         longTravel(my_trip);
                         break;
-                
-                        case 2:
+                        }
+
+                        case 2:{
                         booking my_trip=getBookingDetails();
                         localTravel(my_trip);
                         break;
-                
+                        }
+
                         case 3:
                         flag_1=false;
                         break;
@@ -112,34 +122,24 @@ while(flag==true){
 
     }
 
-    switch(option){
-        case 1:
-        printf("\nlong travel coming soon");
-        break;
 
-        case 2:
-        printf("\nlocal travel coming soon");
-        break;
-
-        case 3:
-        yourChoice();
-        break;
-
-        default:
-        printf("\nwrong input!, try again");
-        break;
-    }
+    return 0;
 }
 
 
 booking getBookingDetails(){
     booking currentBooking;
-    
+
+    flag_2=true;
+    flag_3=true;
+
+
     printf("\n--- ENTER RESERVATION DETAILS ---\n");
     printf("Enter the date of the month of the departure :\n");
-    scanf("%d", currentBooking.date);
-    while(flag_2=true){
-        if(currentBooking.date <=31 || currentBooking.date >0){
+    scanf("%d", &currentBooking.date);
+
+    while(flag_2==true){
+        if(currentBooking.date <=31 && currentBooking.date >0){
             flag_2=false;
             break;
         }else{
@@ -161,18 +161,18 @@ booking getBookingDetails(){
     printf("11. Kolkata\n");
     scanf(" %s", currentBooking.city_city);
 
-    while(flag_3=true){
-        if(currentBooking.city_city==Mumbai,
-            currentBooking.city_city==Pune,
-            currentBooking.city_city==Ahmedabad,
-            currentBooking.city_city==Goa,
-            currentBooking.city_city==Delhi,
-            currentBooking.city_city==Jaipur,
-            currentBooking.city_city==Chandigarh,
-            currentBooking.city_city==Bengaluru,
-            currentBooking.city_city==Hyderabad,
-            currentBooking.city_city==Chennai,
-            currentBooking.city_city==Kolkata){
+    while(flag_3==true){
+        if(strcmp(currentBooking.city_city, "Mumbai")==0||
+            strcmp(currentBooking.city_city, "Pune")==0||
+            strcmp(currentBooking.city_city, "Ahmedabad")==0||
+            strcmp(currentBooking.city_city, "Goa")==0||
+            strcmp(currentBooking.city_city, "Delhi")==0||
+            strcmp(currentBooking.city_city, "Jaipur")==0||
+            strcmp(currentBooking.city_city, "Chandigarh")==0||
+            strcmp(currentBooking.city_city, "Bengaluru")==0||
+            strcmp(currentBooking.city_city, "Hyderabad")==0||
+            strcmp(currentBooking.city_city, "Chennai")==0||
+            strcmp(currentBooking.city_city, "Kolkata")==0){
                 flag_3=false;
                 break;
             }else{
@@ -180,48 +180,49 @@ booking getBookingDetails(){
             }
     }
 
-    printf("\nPlease enter your budget or type 'any' : \n");
-    scanf(" %s", currentBooking.budget );
+    flag_3=true;
 
-    while(flag_3=true){
-        if(currentBooking.budget>500 && currentBooking.budget<10000){
+    while(flag_3==true){
+        printf("\nPlease enter your budget (500 - 10000) or type 'any': ");
+        scanf("%s", currentBooking.budget);
+
+        int numeric_budget=atoi(currentBooking.budget);
+
+        if(strcmp(currentBooking.budget, "any")==0){
             flag_3=false;
             break;
-        }else if(currentBooking.budget==any){
+        }else if(numeric_budget >= 500 && numeric_budget <= 10000){
             flag_3=false;
         }else{
             printf("\nno service for this budget try something else");
         }
     }
+
     return currentBooking;
 }
 
 void longTravel(booking details){
+
     printf("\n--- Processing Long Travel Booking ---\n");
     printf("on %d of the month from %s \nbudget of %s ", details.date, details.city_city, details.budget);
-    if(details.date<16 && details.date>0){
-        if(details.budget>500 && details.budget=<1500){
-            printf("\nsorry no bus for long distance travel:");
-        }else if(details.budget>1500 && details.budget=<5000){
-            printf("\nthese are the available buses ");
-        }else if(details.budget>5000 && details.budget<=10000){
-            printf("\nthese are the available buses :");
-        }else if(details.budget==any){
-            printf("\nall the buses");
-        }else{
-            printf("\nthese are the available buses:");
+
+    int budget_val = atoi(details.budget);
+    bool is_any = (strcmp(details.budget, "any") == 0);
+
+
+if(details.date < 16 && details.date > 0) {
+        if(!is_any && budget_val <= 1500) {
+            printf("Sorry, no bus for long distance travel in this budget.\n");
+        } else if(is_any || (budget_val > 1500 && budget_val <= 5000)) {
+            printf("These are the standard long travel buses available!\n");
+        } else {
+            printf("These are the luxury sleeper buses available!\n");
         }
-    }else{
-        if(details.budget>500 && details.budget=<1500){
-            printf("\nsorry no bus for long distance travel:");
-        }else if(details.budget>1500 && details.budget=<5000){
-            printf("\nthese are the available buses ");
-        }else if(details.budget>5000 && details.budget<=10000){
-            printf("\nthese are the available buses :");
-        }else if(details.budget==any){
-            printf("\nall the buses");
-        }else{
-            printf("\nthese are the available buses:");
+    } else {
+        if(!is_any && budget_val <= 1500) {
+            printf("Sorry, no bus for long distance travel in this budget.\n");
+        } else {
+            printf("These are the off-peak long travel buses available!\n");
         }
     }
 }
@@ -229,20 +230,17 @@ void longTravel(booking details){
 void localTravel(booking details){
     printf("\n--- Processing Local Travel Booking ---\n");
     printf("on %d of the month from %s \nbudget of %s ", details.date, details.city_city, details.budget);
-    if(details.date<16 && details.date>0){
-        if(details.budget>500 && details.budget=<1500 || details.budget==any){
-            printf("\nthese are the available buses ");
-        }else{
-            printf("\nno available buses at this price range:");
-        }
-    }else{
-        if(details.budget>500 && details.budget=<1500 || details.budget==any){
-            printf("\nthese are the available buses ");
-        }else{
-            printf("\nno available buses at this price range:");
-        }
+
+    int budget_val = atoi(details.budget);
+    bool is_any = (strcmp(details.budget, "any") == 0);
+
+    if(is_any || (budget_val >= 500 && budget_val <= 1500)) {
+        printf("These are the local shuttle buses available.\n");
+    } else {
+        printf("No special luxury local buses at this high price range. Standard shuttles are cheaper!\n");
     }
 }
+
 
 void userData(){
     printf("\n----YOUR DATA----\n");
