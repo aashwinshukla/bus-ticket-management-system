@@ -14,14 +14,18 @@ char name[25];
 char surname[25];
 int year, month, day;
 int code;
+int pin;
 long long contact;
 char email[40];
 int choice;
 int option;
+int bus_choice;
+char transaction[15];
 bool flag=true;
 bool flag_1=true;
 bool flag_2=true;
 bool flag_3=true;
+bool flag_4=true;
 
 
 
@@ -30,6 +34,11 @@ int yourChoice();
 void cities();
 void buses();
 int busReservation();
+void transaction_1();
+void transaction_2();
+void transaction_3();
+void transaction_4();
+
 
 booking getBookingDetails();
 void longTravel(booking details);  
@@ -218,12 +227,14 @@ if(details.date < 16 && details.date > 0) {
             printf("-> [MH-14-LX-8890] Deccan Queen Transports (Luxury Seater) - Fare: 1800\n");
             printf("-> [CH-02-EX-9011] Northern Shuttle (AC Express)          - Fare: 2200\n");
             printf("=========================================================\n");
+            transaction_1();
         } else {
             printf("\n========== AVAILABLE LUXURY SLEEPER BUSES ==========\n");
             printf("-> [MH-12-AS-4521] Bharat Express (AC Sleeper)            - Fare: 5500\n");
             printf("-> [DL-01-NE-1092] Capital Flyer (Premium Sleeper)        - Fare: 6200\n");
             printf("-> [KA-03-SV-2287] Silicon Valley Voyager (Multi-Axle AC)  - Fare: 7000\n");
             printf("====================================================\n");
+            transaction_2();
         }
     } else {
         if(!is_any && budget_val <= 1500) {
@@ -235,6 +246,7 @@ if(details.date < 16 && details.date > 0) {
             printf("-> [WB-02-CC-1254] Eastern Star Liners (Luxury Seater)     - Fare: 3000\n");
             printf("-> [TS-09-CB-6641] Cyberabad Cruiser (AC Sleeper)          - Fare: 4500\n");
             printf("==========================================================\n");
+            transaction_3();
         }
     }
 }
@@ -251,10 +263,11 @@ void localTravel(booking details){
             printf("-> [GA-03-TR-7765] Coastal Cruise Liners (Multi-Axle AC)  - Fare: 950\n");
             printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
             printf("===================================================\n");
+            transaction_4();
         } else {
             printf("\n[INFO] Your budget is higher than standard local fares.\n");
             printf("We recommend our premium localized shuttle:\n");
-            printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+            printf("-> [TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200  (cash only)\n");
             printf("(The remaining change will be refunded at the boarding counter.)\n");
     }
 }
@@ -334,3 +347,257 @@ scanf("%d", &local_option);
 return local_option;
 
 }
+
+void transaction_1(){
+    
+    while(flag_4=true){
+        printf("\n Enter your Bus choice number :");
+        scanf("%d", &bus_choice);
+            switch(bus_choice){
+
+                case 1:
+                printf("\nYOUR CHOICE: [MH-14-LX-8890] Deccan Queen Transports (Luxury Seater) - Fare: 1800\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 1800");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 2:
+                printf("\nYOUR CHOICE: [CH-02-EX-9011] Northern Shuttle (AC Express)          - Fare: 2200\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 2200");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                default:
+                printf("input invalid , try again");
+
+            }
+    }
+    
+}
+
+void transaction_2(){
+    while(flag_4=true){
+        printf("\n Enter your Bus choice number :");
+        scanf("%d", &bus_choice);
+            switch(bus_choice){
+
+                case 1:
+                printf("\nYOUR CHOICE: [MH-12-AS-4521] Bharat Express (AC Sleeper)            - Fare: 5500\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 5500");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 2:
+                printf("\nYOUR CHOICE: [DL-01-NE-1092] Capital Flyer (Premium Sleeper)        - Fare: 6200\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 6200");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 3:
+                printf("\nYOUR CHOICE: [KA-03-SV-2287] Silicon Valley Voyager (Multi-Axle AC)  - Fare: 7000");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 7000");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("\nentered pin in incorrect try again");
+                    }
+                break;
+
+                default:
+                printf("\nwrong input try again");
+
+            }
+    }
+    
+}
+
+void transaction_3(){
+    while(flag_4=true){
+        printf("\n Enter your Bus choice number :");
+        scanf("%d", &bus_choice);
+            switch(bus_choice){
+
+                case 1:
+                printf("\nYOUR CHOICE:[RJ-14-HT-5543] Pink City Travels (Non-AC Seater)       - Fare: 1600\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 1600");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 2:
+                printf("\nYOUR CHOICE: [GJ-01-EE-3214] Western Fleet (Electric Express)        - Fare: 2400\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 2400");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 3:
+                printf("\nYOUR CHOICE: [WB-02-CC-1254] Eastern Star Liners (Luxury Seater)     - Fare: 3000");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 3000");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("\nentered pin in incorrect try again");
+                    }
+                break;
+
+                case 4:
+                printf("\nYOUR CHOICE: [TS-09-CB-6641] Cyberabad Cruiser (AC Sleeper)          - Fare: 4500");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 4500");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("\nentered pin in incorrect try again");
+                    }
+                break;
+
+                default:
+                printf("\nwrong input try again");
+
+            }
+    }
+}
+
+void transaction_4(){
+    while(flag_4=true){
+        printf("\n Enter your Bus choice number :");
+        scanf("%d", &bus_choice);
+            switch(bus_choice){
+
+                case 1:
+                printf("\nYOUR CHOICE: [GA-03-TR-7765] Coastal Cruise Liners (Multi-Axle AC)  - Fare: 950\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 950");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                case 2:
+                printf("\nYOUR CHOICE:[TN-01-AC-4432] Coromandel Connect (Electric Express)  - Fare: 1200\n");
+                printf("Enter your card number :");
+                scanf(" %s", &transaction);
+                printf("\nYour amount to be paid : 1200");
+                printf("\n Enter your 4 digit pin:");
+                scanf("%d", &pin);
+                    if(pin<=9999 && pin>999){
+                        printf("\npayment completed ");
+                        printf("\ntransaction number : 12546728916739268");
+                        printf("\nticket number #26");
+                        flag_4=false;
+                        break;
+                    }else{
+                        printf("entered pin in incorrect try again");
+                    }
+                break;
+
+                default:
+                printf("input invalid , try again");
+
+            }
+    }
+}
+
