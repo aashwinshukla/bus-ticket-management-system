@@ -2,6 +2,8 @@
 #include<stdbool.h>
 #include<string.h>
 #include<stdlib.h>
+#define GLOBAL_IMPL
+#include"../global/global.h"
 
 typedef struct{
     int date;
@@ -10,22 +12,22 @@ typedef struct{
     char am_pm[3];
 }booking;
 
-char name[25];
-char surname[25];
-int year, month, day;
-int code;
-int pin;
-long long contact;
-char email[40];
-int choice;
-int option;
-int bus_choice;
-char transaction[15];
-bool flag=true;
-bool flag_1=true;
-bool flag_2=true;
-bool flag_3=true;
-bool flag_4=true;
+// char name[25];
+// char surname[25];
+// int year, month, day;
+// int code;
+// int pin;
+// long long contact;
+// char email[40];
+// int choice;
+// int option;
+// int bus_choice;
+// char transaction[15];
+// bool flag=true;
+// bool flag_1=true;
+// bool flag_2=true;
+// bool flag_3=true;
+// bool flag_4=true;
 const char* getDestination(char* departure_city);
 void printTicket(booking details, const char* bus_name, int fare);
 
